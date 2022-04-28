@@ -35,8 +35,7 @@ public class Movement : MonoBehaviour
         //and the layer
 
         if (isTouchingTheGround && velocity.y < 0) {
-            velocity.y = -2f;
-        
+            velocity.y = -
         }   
         
         // we are gonna use the axis for movement obv x&z because we dont want to go up
