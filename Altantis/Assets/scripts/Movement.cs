@@ -30,6 +30,8 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HandleShootInput();
+
         touchingGround = Physics.CheckSphere(isTouchingTheGround.position, groundDistance, groundMask);
         //with this i will create a sphere under my playerobject that will check if the player is touching the ground, there is the radius
         //and the layer
@@ -61,4 +63,13 @@ public class Movement : MonoBehaviour
     
     
     }
+     void HandleShootInput ()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            //shoot
+            PlayerGun.Instance.shoot();
+        }
+    }
 }
+
