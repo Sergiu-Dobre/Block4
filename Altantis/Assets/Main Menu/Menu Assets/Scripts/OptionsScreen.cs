@@ -33,19 +33,6 @@ public class OptionsScreen : MonoBehaviour
             vsyncTog.isOn = true;
         }
 
-        bool foundRes = false;
-        for(int i = 0; i < resolutions.Count; i++)
-        {
-            if(Screen.width == resolutions[i].horizontal && Screen.height == resolutions[i].vertical)
-            {
-                foundRes = true;
-
-                selectedResolution = i;
-
-                UpdateResLabel();
-            }
-        }
-
         float vol = 0f;
         theMixer.GetFloat("MasterVol", out vol);
         mastSlider.value = vol;
