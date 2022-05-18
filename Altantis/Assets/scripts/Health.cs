@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Health : MonoBehaviour
 {
-    public Text healthText;
+    public TMP_Text healthText;
     public Image healthBar;
     public Image[] healthPoints;
 
