@@ -14,7 +14,7 @@ public class Projectile : MonoBehaviour
 
     void Start()
     {
-        FiringPoint = transform.position;    
+        FiringPoint = transform.position;
     }
 
     void Update()
@@ -27,8 +27,22 @@ public class Projectile : MonoBehaviour
         if (Vector3.Distance(FiringPoint, transform.position) > maxProjectileDistance)
         {
             Destroy(this.gameObject);
-        }else{
-        transform.Translate(Vector3.forward * ProjectileSpeed * Time.deltaTime);
+        }
+        else
+        {
+            transform.Translate(Vector3.forward * ProjectileSpeed * Time.deltaTime);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<Enemy_Health>().currentHealth -= 30;
+            Destroy(this.gameObject);
+        }
+
+
+    }
+
 }
