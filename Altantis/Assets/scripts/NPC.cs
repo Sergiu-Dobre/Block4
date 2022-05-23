@@ -21,9 +21,9 @@ public class NPC : MonoBehaviour {
     }
 	
 	void Update () {
-          Vector3 Pos = Camera.main.WorldToScreenPoint(NPCCharacter.position);
-          Pos.y += 175;
-          ChatBackGround.position = Pos;
+         // Vector3 Pos = Camera.main.WorldToScreenPoint(NPCCharacter.position);
+         // Pos.y += 1;
+         // ChatBackGround.position = Pos;
     }
 
     public void OnTriggerStay(Collider other)
