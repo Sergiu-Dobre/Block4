@@ -20,16 +20,16 @@ public class POV : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseDPI * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X");
         //rotation on X or Y(mouse) won't be afected by frames 
-        float mouseY = Input.GetAxis("Mouse Y")*mouseDPI*Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y");
 
         rotationX -= mouseY;
         transform.localRotation = Quaternion.Euler(rotationX, 0f, 0f);
         rotationX = Mathf.Clamp(rotationX, -90, 90);
         //clamping the rotation
 
-        pBody.Rotate(Vector3.up * mouseX);
+        pBody.Rotate(Vector3.up * mouseX * Time.deltaTime * mouseDPI);
        
     }
 }

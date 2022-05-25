@@ -30,8 +30,6 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleShootInput();
-
         touchingGround = Physics.CheckSphere(isTouchingTheGround.position, groundDistance, groundMask);
         //with this i will create a sphere under my playerobject that will check if the player is touching the ground, there is the radius
         //and the layer
@@ -46,7 +44,6 @@ public class Movement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
         //this way the movement will be transformed depending where does our player "look"
 
-
         if(Input.GetButtonDown("Jump")&& isTouchingTheGround)
         {
             velocity.y = Mathf.Sqrt(jumpH * -2f * gravity); //gotta love maths 
@@ -58,18 +55,6 @@ public class Movement : MonoBehaviour
         velocity.y += gravity*Time.deltaTime;
 
         controlls.Move(velocity * Time.deltaTime);
-    
-    
-    
-    
-    }
-     void HandleShootInput ()
-    {
-        if (Input.GetButton("Fire1"))
-        {
-            //shoot
-            PlayerGun.Instance.shoot();
-        }
     }
 }
 

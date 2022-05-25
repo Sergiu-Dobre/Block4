@@ -41,8 +41,6 @@ public class Projectile : MonoBehaviour
             collision.gameObject.GetComponent<Enemy_Health>().currentHealth -= 30;
             Destroy(this.gameObject);
         }
-
-
     }
 
 }
