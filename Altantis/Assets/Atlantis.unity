@@ -1831,11 +1831,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 148f31f3fcb10a1458929caf8ed0bcef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.745
+      value: -0.755
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 148f31f3fcb10a1458929caf8ed0bcef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.166
+      value: 1.168
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 148f31f3fcb10a1458929caf8ed0bcef, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1903,6 +1903,7 @@ MonoBehaviour:
   FiringPoint: {fileID: 981543570}
   projectilePrefab: {fileID: 2227805832623729686, guid: f515d7d6750d58b44aed6ea36b658b59, type: 3}
   firingSpeed: 0.5
+  Instance: {fileID: 0}
 --- !u!1 &390164285
 GameObject:
   m_ObjectHideFlags: 0
@@ -4841,7 +4842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ace9564023c26c044a72f791d8cec386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseDPI: 400
+  mouseDPI: 100
   pBody: {fileID: 459202869}
 --- !u!114 &963194230
 MonoBehaviour:
