@@ -67,9 +67,9 @@ public class DetectScript : MonoBehaviour
 
     private void ShootPlayer()
     {
-        GameObject currentBullet = Instantiate(bullet, shootpoint.position, shootpoint.rotation);
-        Rigidbody rig = currentBullet.GetComponent<Rigidbody>();
+            GameObject currentBullet = Instantiate(bullet, shootpoint.position, shootpoint.rotation);
+            Rigidbody rig = currentBullet.GetComponent<Rigidbody>();
 
-        rig.AddForce(transform.forward * shootSpeed, ForceMode.VelocityChange);
+            rig.AddForce(transform.forward * shootSpeed, ForceMode.VelocityChange);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     private Vector3 FiringPoint;
+    private HealthSystem healthSystem;
 
     [SerializeField]
     private float ProjectileSpeed;
@@ -40,6 +41,10 @@ public class Projectile : MonoBehaviour
         {
             collision.gameObject.GetComponent<Enemy_Health>().currentHealth -= 30;
             Destroy(this.gameObject);
+        }
+        if (collision.gameObject.tag == "Player")
+        {
+            healthSystem.Damage(30);
         }
     }
 
