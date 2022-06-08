@@ -7,6 +7,7 @@ public class ShootingController : MonoBehaviour
     public float moveForce;
     public GameObject bullet;
     public Transform gun;
+    public Transform point;
     public float shootRate;
     public float shootForce;
     private float m_shootRateTimeStamp;
@@ -19,7 +20,7 @@ public class ShootingController : MonoBehaviour
             if (Time.time > m_shootRateTimeStamp)
             {
                 GameObject go = (GameObject)Instantiate(
-                bullet, gun.position, gun.rotation);
+                bullet, point.position, point.rotation);
 
                 go.GetComponent<Rigidbody>().AddForce(gun.forward * shootForce);
                 m_shootRateTimeStamp = Time.time + shootRate;

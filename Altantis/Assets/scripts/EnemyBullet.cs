@@ -14,7 +14,7 @@ public class EnemyBullet : MonoBehaviour
     [SerializeField]
     private float maxProjectileDistance;
 
-   
+   public float radius = 3;
 
     void Start()
     {
@@ -43,8 +43,19 @@ public class EnemyBullet : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             //collision.gameObject.GetComponent<PlayerHealth>().currenthealth -= 30;
-            PlayerHealth.TakeDamage(damageAmount);
-            Destroy(this.gameObject);
+           // PlayerHealth.TakeDamage(damageAmount);
+
+            Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+            foreach(Collider nearbyObject in colliders)
+            {
+                if (nearbyObject.tag == "Player")
+                {
+                    StartCoroutine(FindObjectOfType<PlayerHealth>().TakeDamage(damageAmount)); 
+                }
+            }
+
+
+            this.enabled = false;
         }
     }
 
