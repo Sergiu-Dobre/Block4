@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &690790277101729041
+--- !u!1 &4591519584122679054
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 690790277101729052}
-  - component: {fileID: 690790277101729053}
-  - component: {fileID: 690790277101729042}
-  - component: {fileID: 690790277101729043}
-  - component: {fileID: 690790277101729040}
-  - component: {fileID: 690790277101729055}
+  - component: {fileID: 4591519584122679048}
+  - component: {fileID: 4591519584122679051}
+  - component: {fileID: 4591519584122679050}
+  - component: {fileID: 4591519584122679053}
+  - component: {fileID: 4591519584122679052}
+  - component: {fileID: 4591519584122679055}
   m_Layer: 0
-  m_Name: QuestMarker (1)
+  m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &690790277101729052
+--- !u!4 &4591519584122679048
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690790277101729041}
+  m_GameObject: {fileID: 4591519584122679054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -780.09, y: 173.67676, z: -1330.14}
+  m_LocalPosition: {x: -793.85, y: 171.74, z: -1312.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &690790277101729053
+--- !u!33 &4591519584122679051
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690790277101729041}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &690790277101729042
+  m_GameObject: {fileID: 4591519584122679054}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &4591519584122679050
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690790277101729041}
+  m_GameObject: {fileID: 4591519584122679054}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -84,26 +84,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &690790277101729043
-SphereCollider:
+--- !u!65 &4591519584122679053
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690790277101729041}
+  m_GameObject: {fileID: 4591519584122679054}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &690790277101729040
+--- !u!114 &4591519584122679052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690790277101729041}
+  m_GameObject: {fileID: 4591519584122679054}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20c58d92023912946a9aef4b8af5e235, type: 3}
@@ -111,15 +111,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 9fe9d711aa3a31b45bb5813376984503, type: 3}
   image: {fileID: 0}
---- !u!114 &690790277101729055
+  idQuest: 1
+--- !u!114 &4591519584122679055
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690790277101729041}
+  m_GameObject: {fileID: 4591519584122679054}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23919fc5e64eb8e4a98805a71439e29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Questmarker: {fileID: 4591519584122679054}
+  Questicon: {fileID: 806488575108355384, guid: cdc34003880acaa40a76bc726a08832a, type: 3}
+  comppasSscrip: {fileID: 0}
+  questScript: {fileID: 4591519584122679052}
