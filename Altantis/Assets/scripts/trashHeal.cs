@@ -6,7 +6,7 @@ public class trashHeal : MonoBehaviour
 {
     
     public float radius = 2;
-    public int healing = 10;
+    public int healing = 25;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,25 +18,7 @@ public class trashHeal : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-           
-
-            Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
-            foreach (Collider nearbyObject in colliders)
-            {
-                if (nearbyObject.tag == "Player")
-                {
-                    StartCoroutine(FindObjectOfType<PlayerHealth>().Heal(healing));
-                }
-            }
-
-                
-            this.enabled = false;
-        }
-    }
+   
 
 }
 
