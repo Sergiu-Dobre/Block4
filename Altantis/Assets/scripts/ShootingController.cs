@@ -17,14 +17,18 @@ public class ShootingController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+        
             if (Time.time > m_shootRateTimeStamp)
             {
+                new WaitForSeconds(0.5f);
+
                 GameObject go = (GameObject)Instantiate(
                 bullet, point.position, point.rotation);
-
+               
                 go.GetComponent<Rigidbody>().AddForce(gun.forward * shootForce);
                 m_shootRateTimeStamp = Time.time + shootRate;
-            }
+              
+            }  
 
         }
 
