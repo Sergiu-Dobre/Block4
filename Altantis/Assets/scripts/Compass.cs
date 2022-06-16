@@ -18,6 +18,7 @@ public class Compass : MonoBehaviour
     public QuestMarker one;
     public QuestMarker two;
     public QuestMarker three;
+    public QuestMarker four;
 
     private int count = 0;
 
@@ -28,6 +29,7 @@ public class Compass : MonoBehaviour
         AddQuestMarker(one);
         AddQuestMarker(two);
         AddQuestMarker(three);
+        AddQuestMarker(four);
     }
 
     private void Update()
