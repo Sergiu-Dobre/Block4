@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 8597959477150105421}
   - component: {fileID: 8579968972306056878}
   - component: {fileID: 4407974905424331629}
+  - component: {fileID: -5130686621586439236}
   m_Layer: 0
   m_Name: Dart
   m_TagString: Untagged
@@ -157,6 +158,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.58, y: 8.18, z: 2.25}
   m_Center: {x: 0, y: 4.84, z: 0}
+--- !u!33 &-5130686621586439236
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2493440267310602252}
+  m_Mesh: {fileID: 0}
 --- !u!1 &6002721867015542032
 GameObject:
   m_ObjectHideFlags: 0
