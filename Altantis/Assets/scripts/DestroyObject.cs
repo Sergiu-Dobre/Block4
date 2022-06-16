@@ -34,7 +34,7 @@ public class DestroyObject : MonoBehaviour
             //  Destroy(Questicon);
             Questicon.SetActive(false);
             Questmarker.SetActive(false);
-
+            //this works for 3 trash ~things~
             if (count >= 4)
             {   //create Gameover scene
                 SceneManager.LoadScene("MainMenu");
