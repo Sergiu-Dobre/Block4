@@ -406,7 +406,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 862700613}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2001992648868111107, guid: 5b57af71ed14641498a835e0f09f7e58, type: 2}
   m_audioClip: {fileID: 8300000, guid: 0a94e5ea3498bd54b8863e33bb292599, type: 3}
