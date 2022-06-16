@@ -28,6 +28,9 @@ public class PlayerHealth : MonoBehaviour
             SceneManager.LoadScene("Atlantis");
             playerHP = 100;
         }
+
+        if (playerHP > 150)
+            playerHP = 150;
     }
 
     public IEnumerator TakeDamage(int damageAmount)

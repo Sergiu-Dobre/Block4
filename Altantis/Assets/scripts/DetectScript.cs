@@ -34,7 +34,7 @@ public class DetectScript : MonoBehaviour
     void Update()
     {
       
-        //Matrix4x4.TRS(this,Quaternion.LookRotation(Player.transform,Vector3.up));
+       // Matrix4x4.TRS(this,Quaternion.LookRotation(Player.transform Vector3));
         if (detected)
         {
             enemy.LookAt(target.transform);
