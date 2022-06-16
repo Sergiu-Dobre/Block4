@@ -18,16 +18,18 @@ public class Compass : MonoBehaviour
     public QuestMarker one;
     public QuestMarker two;
     public QuestMarker three;
+    public QuestMarker four;
 
     private int count = 0;
 
     private void Start()
     {
-        compassUnit = compassImage.rectTransform.rect.width / 400f;
+        compassUnit = compassImage.rectTransform.rect.width / 360f;
 
         AddQuestMarker(one);
         AddQuestMarker(two);
         AddQuestMarker(three);
+        AddQuestMarker(four);
     }
 
     private void Update()
@@ -62,7 +64,7 @@ public class Compass : MonoBehaviour
     Vector2 GetPosOnCompass(QuestMarker marker)
     {
         Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.z);
-        Vector2 playerFwd = new Vector2(player.transform.position.x, player.transform.forward.z);
+        Vector2 playerFwd = new Vector2(player.transform.forward.x, player.transform.forward.z);
 
         float angle = Vector2.SignedAngle(marker.position - playerPos, playerFwd);
 
