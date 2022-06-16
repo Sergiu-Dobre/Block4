@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Audio;
+using UnityEngine.Video;
 
 public class DialogueSystem: MonoBehaviour {
 
@@ -32,11 +33,14 @@ public class DialogueSystem: MonoBehaviour {
 
     public GameObject RawImage;
 
+    public VideoPlayer videoPlayer;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         dialogueText.text = "";
         RawImage.SetActive(false);
+        videoPlayer.Pause();
     }
 
     void Update()
@@ -175,6 +179,7 @@ public class DialogueSystem: MonoBehaviour {
             RawImage.SetActive(true);
             StartCoroutine(waiter());
             Time.timeScale = 0f;
+            videoPlayer.Play();
         }
     }
 
@@ -187,5 +192,6 @@ public class DialogueSystem: MonoBehaviour {
 
         RawImage.SetActive(false);
         Time.timeScale = 1f;
+        videoPlayer.Pause();
     }
 }

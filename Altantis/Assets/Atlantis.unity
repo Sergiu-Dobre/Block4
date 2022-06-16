@@ -17704,6 +17704,7 @@ MonoBehaviour:
   outOfRange: 1
   audioClip: {fileID: 0}
   RawImage: {fileID: 1834938796}
+  videoPlayer: {fileID: 1995034991}
 --- !u!82 &1878277319
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19302,7 +19303,7 @@ GameObject:
   - component: {fileID: 1995034992}
   - component: {fileID: 1995034991}
   m_Layer: 0
-  m_Name: Video Player
+  m_Name: VideoPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
