@@ -188,7 +188,7 @@ public class DialogueSystem: MonoBehaviour {
         Debug.Log("Starting countdown (46s)");
 
         //Wait for video duration
-        yield return new WaitForSeconds(46);
+        yield return new WaitForSecondsRealtime(46);
 
         RawImage.SetActive(false);
         Time.timeScale = 1f;
