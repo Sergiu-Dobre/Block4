@@ -7,15 +7,11 @@ public class DestroyObject : MonoBehaviour
 {
     public GameObject Questmarker;
     public GameObject Questicon;
-    public int count;
 
     [SerializeField] private Compass comppasSscrip;
     [SerializeField] private QuestMarker questScript;
 
-    private void Start()
-    {
-        count = 0;
-    }
+   
 
     private void Update()
     {
@@ -24,7 +20,7 @@ public class DestroyObject : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        count += 1;
+        
         if (other.gameObject.tag == "Player")
         {
 
@@ -35,11 +31,7 @@ public class DestroyObject : MonoBehaviour
             Questicon.SetActive(false);
             Questmarker.SetActive(false);
             //this works for 3 trash ~things~
-            if (count >= 4)
-            {   //create Gameover scene
-                SceneManager.LoadScene("MainMenu");
-                Debug.Log("done");
-            }
+            
         }
 
     }
