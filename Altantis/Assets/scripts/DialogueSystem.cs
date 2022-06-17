@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Audio;
+using UnityEngine.Video;
 
 public class DialogueSystem: MonoBehaviour {
 
@@ -29,10 +31,16 @@ public class DialogueSystem: MonoBehaviour {
     public AudioClip audioClip;
     AudioSource audioSource;
 
+    public GameObject RawImage;
+
+    public VideoPlayer videoPlayer;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         dialogueText.text = "";
+        RawImage.SetActive(false);
+        videoPlayer.Pause();
     }
 
     void Update()
@@ -167,6 +175,23 @@ public class DialogueSystem: MonoBehaviour {
             StopAllCoroutines();
             dialogueGUI.SetActive(false);
             dialogueBoxGUI.gameObject.SetActive(false);
+            Debug.Log("Test");
+            RawImage.SetActive(true);
+            StartCoroutine(waiter());
+            Time.timeScale = 0f;
+            videoPlayer.Play();
         }
+    }
+
+    IEnumerator waiter()
+    {
+        Debug.Log("Starting countdown (46s)");
+
+        //Wait for video duration
+        yield return new WaitForSeconds(46);
+
+        RawImage.SetActive(false);
+        Time.timeScale = 1f;
+        videoPlayer.Pause();
     }
 }
