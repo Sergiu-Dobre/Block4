@@ -6,7 +6,7 @@ using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public static int playerHP = 100;
+    public int playerHP = 100;
     public static bool isGameOver;
     public TextMeshProUGUI playerHpText;
     public bool healingActive;
