@@ -9,12 +9,15 @@ public class CollectTrident : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKey(KeyCode.F)) 
+        if (Input.GetKey(KeyCode.F))
         {
-            Destroy(gameObject);
-            ScoringSystem.theScore += 1;
-          
-        }
+            if (other.gameObject.tag == "Player")
+            {
+                Destroy(gameObject);
+                ScoringSystem.theScore += 1;
+            }
+
+        } 
 
 
  
