@@ -30,10 +30,13 @@ public class DialogueSystem: MonoBehaviour {
 
     public AudioClip audioClip;
     AudioSource audioSource;
+    public AudioMixer theMixer;
 
     public GameObject RawImage;
 
     public VideoPlayer videoPlayer;
+
+    bool isDone = false;
 
     void Start()
     {
@@ -175,11 +178,14 @@ public class DialogueSystem: MonoBehaviour {
             StopAllCoroutines();
             dialogueGUI.SetActive(false);
             dialogueBoxGUI.gameObject.SetActive(false);
-            Debug.Log("Test");
-            RawImage.SetActive(true);
-            StartCoroutine(waiter());
-            Time.timeScale = 0f;
-            videoPlayer.Play();
+                if (!isDone) {
+                    RawImage.SetActive(true);
+                    StartCoroutine(waiter());
+                    Time.timeScale = 0f;
+                    videoPlayer.Play();
+                    theMixer.SetFloat("MusicVol", -80);
+                    isDone = true;
+                }
         }
     }
 
@@ -193,5 +199,6 @@ public class DialogueSystem: MonoBehaviour {
         RawImage.SetActive(false);
         Time.timeScale = 1f;
         videoPlayer.Pause();
+        theMixer.SetFloat("MusicVol", 5);
     }
 }
