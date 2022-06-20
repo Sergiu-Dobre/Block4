@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextLevel : MonoBehaviour
+public class EndGame : MonoBehaviour
 {
 
     // Start is called before the first frame update
@@ -14,12 +14,12 @@ public class NextLevel : MonoBehaviour
 
     IEnumerator waiter()
     {
-        Debug.Log("Starting countdown (21s)");
+        Debug.Log("Starting countdown (20)");
 
         //Wait for video duration
-        yield return new WaitForSeconds(21);
+        yield return new WaitForSeconds(20);
 
-        SceneManager.LoadScene("Atlantis");
+        Application.Quit();
     }
 
     // Update is called once per frame
