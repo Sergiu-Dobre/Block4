@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public bool healingActive;
     public int radius = 2;
     public int healing = 25;
+    public AudioSource healSound;
 
     private void Start()
     {
@@ -28,6 +29,8 @@ public class PlayerHealth : MonoBehaviour
             SceneManager.LoadScene("Atlantis");
             playerHP = 100;
         }
+        if (playerHP > 150)
+            playerHP = 150;
     }
 
     public IEnumerator TakeDamage(int damageAmount)
@@ -64,6 +67,7 @@ public class PlayerHealth : MonoBehaviour
             //           if (nearbyObject.tag == "Trash")
             //           {
             StartCoroutine(FindObjectOfType<PlayerHealth>().Heal(healing));
+            healSound.Play();
             Destroy(other.gameObject);
             //          }
         }
