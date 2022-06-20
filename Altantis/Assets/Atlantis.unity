@@ -3583,6 +3583,10 @@ PrefabInstance:
       propertyPath: bullet
       value: 
       objectReference: {fileID: 8149695371142858948, guid: 3fd4bb8966a9db04aa1d2b948ffda9c8, type: 3}
+    - target: {fileID: 9120158650170186448, guid: b5cfb4ae0c1fc5d45b040a0d29cea284, type: 3}
+      propertyPath: forwardSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5cfb4ae0c1fc5d45b040a0d29cea284, type: 3}
 --- !u!1001 &369411735
@@ -3749,12 +3753,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad0e62db98a24c49a36c664d478156b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 2000
+  moveForce: 5000
   bullet: {fileID: 7324403474027469676, guid: b53ac5da03f48d94f88c29975e6fc14e, type: 3}
   gun: {fileID: 1340381632}
   point: {fileID: 1781643865}
   shootRate: 0
-  shootForce: 5000
+  shootForce: 7000
 --- !u!1001 &374891307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16830,6 +16834,10 @@ PrefabInstance:
       propertyPath: bullet
       value: 
       objectReference: {fileID: 8149695371142858948, guid: 3fd4bb8966a9db04aa1d2b948ffda9c8, type: 3}
+    - target: {fileID: 9120158650170186448, guid: b5cfb4ae0c1fc5d45b040a0d29cea284, type: 3}
+      propertyPath: forwardSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5cfb4ae0c1fc5d45b040a0d29cea284, type: 3}
 --- !u!1001 &1692216564
@@ -22472,5 +22480,9 @@ PrefabInstance:
       propertyPath: bullet
       value: 
       objectReference: {fileID: 8149695371142858948, guid: 3fd4bb8966a9db04aa1d2b948ffda9c8, type: 3}
+    - target: {fileID: 9120158650170186448, guid: b5cfb4ae0c1fc5d45b040a0d29cea284, type: 3}
+      propertyPath: forwardSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5cfb4ae0c1fc5d45b040a0d29cea284, type: 3}
