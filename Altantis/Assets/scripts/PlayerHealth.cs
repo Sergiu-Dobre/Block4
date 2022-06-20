@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public bool healingActive;
     public int radius = 2;
     public int healing = 25;
+    public AudioSource healSound;
 
     private void Start()
     {
@@ -64,32 +65,15 @@ public class PlayerHealth : MonoBehaviour
             //           if (nearbyObject.tag == "Trash")
             //           {
             StartCoroutine(FindObjectOfType<PlayerHealth>().Heal(healing));
+            healSound.Play();
             Destroy(other.gameObject);
             //          }
         }
         Debug.Log(other.tag);
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Trash")
-        {
-            //
-            //
-            //        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
-            //       foreach (Collider nearbyObject in colliders)
-            //       {
-            //           if (nearbyObject.tag == "Trash")
-            //           {
-            StartCoroutine(FindObjectOfType<PlayerHealth>().Heal(healing));
-            //          }
-        }
-
-
-        //     this.enabled = false;
-        Debug.Log(collision.gameObject.tag);
-        // }
+  
     }
 
 
-}
+
 
