@@ -16,7 +16,7 @@ public class ScoringSystem : MonoBehaviour
         scoreText.GetComponent<Text>().text = "Trident parts collected = " + theScore;
         if (theScore >= 3)
         {   //create Gameover scene
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("FinalCutscene");
             Debug.Log("done");
         }
     }
