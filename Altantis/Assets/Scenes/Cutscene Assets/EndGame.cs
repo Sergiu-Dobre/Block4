@@ -14,10 +14,10 @@ public class NextLevel : MonoBehaviour
 
     IEnumerator waiter()
     {
-        Debug.Log("Starting countdown (21s)");
+        Debug.Log("Starting countdown (28s)");
 
         //Wait for video duration
-        yield return new WaitForSeconds(21);
+        yield return new WaitForSeconds(28);
 
         SceneManager.LoadScene("Atlantis");
     }

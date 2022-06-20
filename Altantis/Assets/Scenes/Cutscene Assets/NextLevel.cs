@@ -14,10 +14,10 @@ public class EndGame : MonoBehaviour
 
     IEnumerator waiter()
     {
-        Debug.Log("Starting countdown (20)");
+        Debug.Log("Starting countdown (21)");
 
         //Wait for video duration
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(21);
 
         Application.Quit();
     }
