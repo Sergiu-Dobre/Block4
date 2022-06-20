@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ScoringSystem : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class ScoringSystem : MonoBehaviour
 
     void Update()
     {
-        scoreText.GetComponent<Text>().text = "Trident parts collected = " + theScore;
+        scoreText.GetComponent<TextMeshProUGUI>().text = "Trident parts collected = " + theScore;
         if (theScore >= 3)
         {   //create Gameover scene
             SceneManager.LoadScene("FinalCutscene");
