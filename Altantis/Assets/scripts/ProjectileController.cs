@@ -13,7 +13,7 @@ public class ProjectileController : MonoBehaviour
    {
         if (collision.gameObject.tag == "Enemy")
        {
-           collision.gameObject.GetComponent<Enemy_Health>().currentHealth -= 30;
+           collision.gameObject.GetComponent<Enemy_Health>().currentHealth -= 20;
             Destroy(this.gameObject);
         }
     }
